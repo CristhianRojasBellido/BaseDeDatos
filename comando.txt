@@ -1,0 +1,14 @@
+sudo apt update
+sudo apt upgrade
+sudo su
+passwd root //para cambiar la contraseña del root
+sudo apt install mysql-server //Instalacion del mysql
+mysql_secure_installation // poder activar la seguridad de mysql
+sudo mysql -u root
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'cristian12' // Para poder cambiar la contraseña
+exit
+sudo mysql -u root -p
+CREATE USER 'cristian'@'localhost' IDENTIFIED BY 'cristian12'; //crear nuevo usuario y con su contraseña
+GRANT ALL PRIVILEGES ON . TO 'cristian'@'localhost'; //dar privilegios
+flush privileges; //activacion de los previlegios
+exit; // salimos del entorno mysql
